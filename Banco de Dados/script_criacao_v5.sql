@@ -88,3 +88,11 @@ CREATE TABLE tblStatusFuncionario (
     horaSaiu datetime,
     fkFuncionario int foreign key references tblFuncionario(idFuncionario)
 )
+
+CREATE TABLE tblOshiLogs (
+	idLog int primary key identity,
+    mensagem varchar(500) not null,
+    datalog datetime not null,
+    fkMaquina int foreign key references tblMaquina (idMaquina)
+    
+)
